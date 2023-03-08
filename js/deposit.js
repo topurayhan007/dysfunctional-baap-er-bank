@@ -19,22 +19,7 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
   setTextElementValueById("deposit-total", newDepositTotal);
 
   // get previous balance by using the function
-  const previousBalanceTotal = getextElementValueById("balance-total");
+  const previousBalanceTotal = getTextElementValueById("balance-total");
   const newBalanceTotal = previousBalanceTotal + newDepositAmount;
   setTextElementValueById("balance-total", newBalanceTotal);
 });
-
-const getInputFieldValueById = (id) => {
-  const value = document.getElementById(id).value;
-  return parseFloat(value);
-};
-
-const getTextElementValueById = (id) => {
-  const text = document.getElementById(id).innerText;
-  return parseFloat(text);
-};
-
-const setTextElementValueById = (id, value) => {
-  const element = document.getElementById(id);
-  element.innerText = value;
-};
